@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
 
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
         MobileAds.initialize(this, initializationStatus -> {
         });
 
@@ -35,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         mainBinding.reaction.setOnClickListener(v -> {
             Fragment fragment = ReactionFragment.newInstance("", "");
-            transaction.replace(R.id.fragmentHolder, fragment).addToBackStack("tag").commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragmentHolder, fragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
         });
     }
 }
