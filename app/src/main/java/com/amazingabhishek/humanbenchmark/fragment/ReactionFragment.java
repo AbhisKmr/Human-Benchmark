@@ -141,7 +141,7 @@ public class ReactionFragment extends Fragment {
 
                         reactionBinding.best.setText("Height: " + getMax(scoreList));
                         reactionBinding.lowest.setText("Lowest: " + getMin(scoreList));
-//                        reactionBinding.average.setText("Average: " + getAverage(scoreList));
+                        reactionBinding.average.setText("Average: " + ((getMax(scoreList) + getMin(scoreList)) / 2));
                     }
                 }
             }
