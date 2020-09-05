@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.amazingabhishek.humanbenchmark.databinding.ActivityMainBinding;
 import com.amazingabhishek.humanbenchmark.fragment.ReactionFragment;
+import com.amazingabhishek.humanbenchmark.fragment.VerbalFragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -33,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         mainBinding.reaction.setOnClickListener(v -> {
             Fragment fragment = ReactionFragment.newInstance("", "");
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragmentHolder, fragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
+
+        mainBinding.verb.setOnClickListener(v -> {
+            Fragment fragment = VerbalFragment.newInstance("", "");
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragmentHolder, fragment);
             transaction.addToBackStack(null);

@@ -45,10 +45,10 @@
 
         <TextView
             android:id="@+id/dis"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="When the red box turns green, click as quickly as you can.\nClick anywhere to start"
+            android:text="When the red box turns green, click as quickly as you can. Click anywhere to start"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="@+id/textView"

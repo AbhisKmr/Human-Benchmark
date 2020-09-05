@@ -153,7 +153,7 @@ public class ReactionFragment extends Fragment {
             reactionBinding.resultContainer.setVisibility(View.GONE);
             scoreList.clear();
             playMethod(ContextCompat.getDrawable(fragmentActivity, R.drawable.ic_baseline_fast_forward_24), "Reaction time test",
-                    "When the red box turns green, click as quickly as you can.\nClick anywhere to start");
+                    "When the red box turns green, click as quickly as you can. Click anywhere to start");
             reactionBinding.reactionBackground.setBackgroundColor(ContextCompat.getColor(context, R.color.activeBlue));
 
             if (mInterstitialAd.isLoaded()) {
